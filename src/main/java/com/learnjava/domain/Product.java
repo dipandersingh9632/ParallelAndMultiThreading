@@ -4,7 +4,6 @@ import lombok.*;
 
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
 @Builder
 public class Product {
 
@@ -14,4 +13,10 @@ public class Product {
     private ProductInfo productInfo;
     @NonNull
     private Review review;
+
+    public Product(String productId,ProductInfo productInfo,Review review) {
+        this.productId = productId;
+        this.productInfo = productInfo;
+        this.review = review;
+    }
 }
